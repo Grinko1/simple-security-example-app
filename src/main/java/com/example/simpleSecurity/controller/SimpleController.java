@@ -14,9 +14,8 @@ public class SimpleController {
     public String dashboardPage() {
         return "dashboard";
     }
-    @GetMapping("/login")
-    public String loginPage() {
-        System.out.println("login works");
-        return "login";
+    @GetMapping("/admin")
+    public String adminPage() {
+        return "admin";
     }
 }

@@ -18,7 +18,6 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
                 .formLogin((form) -> form
-                        .loginPage("/login")
                         .defaultSuccessUrl("/dashboard", true)
                         .failureUrl("/login?error=true")
                         .permitAll()
@@ -37,7 +36,6 @@ public class SecurityConfig {
         userDetailsManager.createUser(User.withUsername("user")
                 .password("{noop}password")
                 .build());
-
         return userDetailsManager;
     }
 
